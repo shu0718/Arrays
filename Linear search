@@ -1,0 +1,59 @@
+import java.util.*;
+import java.io.*;
+
+public class Main 
+{
+    public static void main(String[] args)
+    {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[] arr = new int[n];
+        
+        for(int i=0;i<n;i++)
+        {
+            arr[i] = scn.nextInt();
+        }
+        
+        int key = scn.nextInt();
+        
+        if(iselementpresent(arr,key))
+        {
+            System.out.println("Key is present in the array.");
+        }
+        else{
+            System.out.println("Key is not present in the array.");
+        }
+        
+    }
+    
+    public static boolean iselementpresent(int[] arr, int key)
+    {
+        for(int i=0;i<arr.length;i++)
+        {
+            if( arr[i] == key)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+
+INPUT:=============================
+5
+1 2 3 4 5 
+8
+
+
+OUTPUT:============================
+Key is not present in the array.
+
+
+INPUT:=============================
+5
+1 2 3 4 5 
+5
+
+OUTPUT:============================
+Key is present in the array.
