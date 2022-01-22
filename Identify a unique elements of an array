@@ -1,0 +1,19 @@
+import java.util.*;
+import java.io.*;
+
+public class Solution{  
+
+    public static vid main(String[] arr){
+        int[] arr = {1,2,3,1,2,3,4};
+        int ans = 0;
+        for(int i=0;i<arr.length;i++)
+        {
+            ans = ans^arr[i];
+        }
+        return ans;
+                   
+    }
+}
+
+OUTPUT:=======================
+4
