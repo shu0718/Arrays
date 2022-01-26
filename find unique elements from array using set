@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {1,2,3,1,2,3,2,3,5,4};
+        
+        HashSet<Integer> myset = new HashSet<>();
+        
+        for(int i:arr)
+        {
+            if(myset.contains(i) == false)
+            {
+                myset.add(i);
+            }
+        }
+        
+        System.out.println(myset);
+    }
+}
+
+OUTPUT:======================
+[1, 2, 3, 4, 5]
