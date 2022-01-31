@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+
+public class Main 
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {4,3,2,7,8,2,3,1};
+        List<Integer> mylist = new ArrayList<>();
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            int index = Math.abs(arr[i])-1;
+            int val = arr[index];
+            
+            if(val<0)
+            {
+                mylist.add(index+1);
+            }
+            else
+            {
+                arr[index] = val*-1;
+            }
+        }
+        
+        System.out.println(mylist);
+    }
+}
+
+
+OUTPUT:=========================================
+[2,3]
