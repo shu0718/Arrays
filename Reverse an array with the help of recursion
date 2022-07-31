@@ -1,0 +1,60 @@
+import java.util.*;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {1,2,3,4,5,3,42,12,0};
+        
+        //int[] result = reverse(arr,0,arr.length-1);
+        
+        reverse_another(arr,0,arr.length-1);
+        // for(int i:result)
+        // {
+        //     System.out.print(i+",");
+        // }
+        
+        for(int i:arr)
+        {
+            System.out.print(i+",");
+        }
+    }
+    
+    //two pointer approach
+    public static int[] reverse(int[] arr,int left, int right)
+    {
+        //base case
+        if(left == right || left > right)
+        {
+            return new int[arr.length];
+        }
+        
+        //reverse logic
+        int[] temp = reverse(arr,left+1,right-1);
+        int temp_1 = arr[right];
+        temp[right] = arr[left];
+        temp[left] = temp_1;
+        
+        return temp;
+    }
+    
+     public static void reverse_another(int[] arr,int left, int right)
+    {
+        //base case
+        if(left == right || left > right)
+        {
+            return;
+        }
+        
+        //reverse logic
+        reverse_another(arr,left+1,right-1);
+        int temp_1 = arr[right];
+        arr[right] = arr[left];
+        arr[left] = temp_1;
+        
+        return;
+    }
+}
+
+
+
